@@ -24,5 +24,8 @@ package org.itstep.task04;
 public class Main {
     public static void main(String[] args) {
         // FIXME: здесь пример использования класса
+        Fraction temp = new Fraction(5,4);
+        Fraction temp2 = new Fraction(1,4);
+        System.out.println(temp.division(temp2).toString());
     }
 }

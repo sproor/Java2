@@ -1,5 +1,9 @@
 package org.itstep.task03;
 
+import org.itstep.task02.City;
+
+import java.util.ArrayList;
+
 /**
  * Задание 3
  * <p>
@@ -31,8 +35,52 @@ package org.itstep.task03;
  * <p>
  * Класс должен находиться в отдельном файле в этом же пакете
  */
+class Temp{
+    private int  count;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public Temp(int count) {
+        this.count = count;
+    }
+}
+class Temp2{
+    private ArrayList<Temp> temps;
+    public int getCount(){
+        int sum = 0;
+        for (Temp temp:this.temps
+        ) {
+            sum+=(int)temp.getCount();
+        }
+        return sum;
+    }
+    public void addCount(Temp temp) {
+        this.temps.add(temp);
+    }
+
+    @Override
+    public String toString() {
+        return "Temp2{" +
+                "temps=" + temps +
+                '}';
+    }
+
+}
 public class Main {
     public static void main(String[] args) {
         // FIXME: здесь пример использования класса
+        Temp temp1 = new Temp(3);
+        Temp temp2 = new Temp(2);
+        Temp temp3 = new Temp(5);
+
+        Temp2 temp21 = new Temp2();
+        temp21.addCount(temp1);
+        System.out.println(temp21.toString());
     }
 }

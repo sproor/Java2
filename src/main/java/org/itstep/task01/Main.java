@@ -24,5 +24,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO: Пишите классы в этом пакете
         // FIXME: здесь пример использования класса
+        Human temp = new Human();
+        System.out.println(temp.toString());
     }
 }

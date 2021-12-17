@@ -24,6 +24,15 @@ package org.itstep.task06;
  */
 public class Main {
     public static void main(String[] args) {
+        MainString temp1 = new MainString('w',10);
+        //System.out.println(temp1.length());
+        char[] arr = { 'p', 'q', 'r', 's' };
+        MainString temp2 = new MainString(arr);
+        //System.out.println(temp2.length());
+        temp1.concat(temp2);
+        System.out.println(temp1.toString());
+        System.out.println(temp1.length());
+        System.out.println(temp1.indexOf(114));
 
     }
 }

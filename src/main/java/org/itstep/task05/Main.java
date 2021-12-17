@@ -31,6 +31,7 @@ package org.itstep.task05;
  */
 public class Main {
     public static void main(String[] args) {
-
+        Money money = new Money(15L, (byte) 15);
+        System.out.println(money.division(5));
     }
 }
